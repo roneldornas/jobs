@@ -27,7 +27,14 @@ export default class App extends React.Component {
           })
         }, { tabBarPosition: 'bottom' })
       }
-    }, { tabBarPosition: 'bottom' });
+    }, {
+      navigationOptions: {
+        tabBarVisible: false
+      },
+      tabBarPosition: 'bottom',
+      lazy: true,
+
+    });
 
     return (
       <Provider store={ store } >
